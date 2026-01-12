@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProHome Services | Professional Home Maintenance & Repair | Free Quotes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        :root {
+            --primary: #059669;
+            --primary-dark: #047857;
+            --secondary: #f59e0b;
+            --accent: #dc2626;
+            --dark: #1f2937;
+            --light: #f8fafc;
+            --gray: #6b7280;
+            --success: #10b981;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--dark);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background: linear-gradient(rgba(5, 150, 105, 0.85), rgba(5, 150, 105, 0.9)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .service-highlights {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-highlight {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .service-highlight i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+        
+        .service-highlight h3 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d97706;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-accent:hover {
+            background-color: #b91c1c;
+            transform: translateY(-3px);
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background-color: white;
+            padding: 40px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            padding: 0 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-text {
+            color: var(--gray);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        
+        /* Value Proposition */
+        .value-proposition {
+            background-color: white;
+        }
+        
+        .usp-container {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 15px;
+            padding: 60px;
+            color: white;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .usp-container::before {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            top: -100px;
+            right: -100px;
+        }
+        
+        .usp-container::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            bottom: -75px;
+            left: -75px;
+        }
+        
+        .usp-container h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .usp-container p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .usp-tag {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Services Grid */
+        .services-grid {
+            background-color: #f9fafb;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-img {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.05);
+        }
+        
+        .service-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--accent);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-title {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-title i {
+            margin-right: 10px;
+            color: var(--primary);
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .service-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-features i {
+            color: var(--success);
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .service-pricing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .price-note {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        /* How It Works */
+        .how-it-works {
+            background-color: white;
+        }
+        
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .step {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #f8fafc;
+            border-radius: 15px;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            font-size: 1.3rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+        
+        .step p {
+            color: var(--gray);
+        }
+        
+        .step-connector {
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            width: 30px;
+            height: 2px;
+            background-color: var(--primary);
+            display: none;
+        }
+        
+        @media (min-width: 992px) {
+            .step-connector {
+                display: block;
+            }
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: #f9fafb;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: "\201C";
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(5, 150, 105, 0.1);
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            color: var(--dark);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h5 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .rating {
+            color: var(--secondary);
+            margin-top: 5px;
+        }
+        
+        /* Quote Form */
+        .quote-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .quote-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .quote-container .section-title h2 {
+            color: white;
+        }
+        
+        .quote-container .section-title p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .quote-features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .quote-feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 200px;
+        }
+        
+        .quote-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .quote-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .quote-feature h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Quote Form */
+        .quote-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-align: center;
+        }
+        
+        .form-footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            min-width: 200px;
+        }
+        
+        .badge-icon {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        .badge-text {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background-color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            background-color: #f9f9f9;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-column h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .service-areas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .area-tag {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content {
+                text-align: center;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .step-connector {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .usp-container {
+                padding: 40px 20px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .service-highlights {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .usp-container h3 {
+                font-size: 1.8rem;
+            }
+            
+            .service-card, .testimonial-card, .quote-form {
+                padding: 20px;
+            }
+            
+            .quote-features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-home"></i>Pro<span>Home</span>Services
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#quote">Free Quote</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Home Services You Can Trust</h1>
+                <p>Licensed, insured, and vetted professionals for all your home maintenance and repair needs. Satisfaction guaranteed.</p>
+                
+                <div class="cta-buttons" style="margin-top: 30px;">
+                    <a href="#quote" class="btn btn-primary">Get a Free Quote</a>
+                    <a href="#services" class="btn btn-secondary">View Our Services</a>
+                </div>
+                
+                <div class="service-highlights">
+                    <div class="service-highlight">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Same-Day Service</h3>
+                        <p>Available 7 Days a Week</p>
+                    </div>
+                    
+                    <div class="service-highlight">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Licensed & Insured</h3>
+                        <p>Fully Protected Service</p>
+                    </div>
+                    
+                    <div class="service-highlight">
+                        <i class="fas fa-medal"></i>
+                        <h3>Quality Guarantee</h3>
+                        <p>1-Year Warranty on All Work</p>
+                    </div>
+                    
+                    <div class="service-highlight">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>No Hidden Fees</h3>
+                        <p>Upfront Transparent Pricing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-number">15,000+</div>
+                    <div class="stat-text">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-text">Average Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">45 Min</div>
+                    <div class="stat-text">Average Response Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Emergency Services</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="value-proposition">
+        <div class="container">
+            <div class="usp-container">
+                <h3>Why Choose ProHome Services?</h3>
+                <p>We're not just another home service company. Our vetted professionals are background-checked, licensed, and trained to deliver exceptional results every time.</p>
+                <div class="usp-tag">Background Checked Pros | 1-Year Warranty | Satisfaction Guaranteed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="services-grid" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Professional Services</h2>
+                <p>Comprehensive home maintenance and repair solutions for every need</p>
+            </div>
+            
+            <div class="services-container">
+                <!-- Service 1: Plumbing -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Plumbing Services">
+                        <div class="service-badge">24/7 EMERGENCY</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-faucet"></i> Plumbing Services</h3>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Leak detection & repair</li>
+                            <li><i class="fas fa-check"></i> Drain cleaning & unclogging</li>
+                            <li><i class="fas fa-check"></i> Water heater installation</li>
+                            <li><i class="fas fa-check"></i> Pipe repair & replacement</li>
+                            <li><i class="fas fa-check"></i> Fixture installation</li>
+                        </ul>
+                        
+                        <div class="service-pricing">
+                            <div>
+                                <div class="price">From $79</div>
+                                <div class="price-note">Diagnostic Fee</div>
+                            </div>
+                            <a href="#quote" class="btn btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2: Electrical -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electrical Services">
+                        <div class="service-badge">SAME DAY</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-bolt"></i> Electrical Services</h3>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Wiring & rewiring</li>
+                            <li><i class="fas fa-check"></i> Panel upgrades</li>
+                            <li><i class="fas fa-check"></i> Lighting installation</li>
+                            <li><i class="fas fa-check"></i> Outlet & switch repair</li>
+                            <li><i class="fas fa-check"></i> Ceiling fan installation</li>
+                        </ul>
+                        
+                        <div class="service-pricing">
+                            <div>
+                                <div class="price">From $99</div>
+                                <div class="price-note">Service Call</div>
+                            </div>
+                            <a href="#quote" class="btn btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3: HVAC -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1584267385494-9fdd9a71ad75?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="HVAC Services">
+                        <div class="service-badge">MAINTENANCE</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-wind"></i> HVAC Services</h3>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> AC repair & installation</li>
+                            <li><i class="fas fa-check"></i> Furnace maintenance</li>
+                            <li><i class="fas fa-check"></i> Duct cleaning</li>
+                            <li><i class="fas fa-check"></i> Thermostat installation</li>
+                            <li><i class="fas fa-check"></i> Air quality testing</li>
+                        </ul>
+                        
+                        <div class="service-pricing">
+                            <div>
+                                <div class="price">From $89</div>
+                                <div class="price-note">Diagnostic</div>
+                            </div>
+                            <a href="#quote" class="btn btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4: Handyman -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Handyman Services">
+                        <div class="service-badge">MULTI-SERVICE</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-tools"></i> Handyman Services</h3>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Drywall repair</li>
+                            <li><i class="fas fa-check"></i> Painting</li>
+                            <li><i class="fas fa-check"></i> Furniture assembly</li>
+                            <li><i class="fas fa-check"></i> Door & window repair</li>
+                            <li><i class="fas fa-check"></i> Shelving & mounting</li>
+                        </ul>
+                        
+                        <div class="service-pricing">
+                            <div>
+                                <div class="price">From $65/hr</div>
+                                <div class="price-note">Hourly Rate</div>
+                            </div>
+                            <a href="#quote" class="btn btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 5: Cleaning -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cleaning Services">
+                        <div class="service-badge">DEEP CLEAN</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-broom"></i> Cleaning Services</h3>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Deep cleaning</li>
+                            <li><i class="fas fa-check"></i> Move-in/move-out cleaning</li>
+                            <li><i class="fas fa-check"></i> Carpet cleaning</li>
+                            <li><i class="fas fa-check"></i> Window washing</li>
+                            <li><i class="fas fa-check"></i> Post-construction cleanup</li>
+                        </ul>
+                        
+                        <div class="service-pricing">
+                            <div>
+                                <div class="price">From $120</div>
+                                <div class="price-note">Standard Cleaning</div>
+                            </div>
+                            <a href="#quote" class="btn btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 6: Pest Control -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pest Control Services">
+                        <div class="service-badge">GUARANTEED</div>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title"><i class="fas fa-bug"></i> Pest Control</h3>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Rodent extermination</li>
+                            <li><i class="fas fa-check"></i> Insect control</li>
+                            <li><i class="fas fa-check"></i> Termite inspection</li>
+                            <li><i class="fas fa-check"></i> Prevention treatments</li>
+                            <li><i class="fas fa-check"></i> Wildlife removal</li>
+                        </ul>
+                        
+                        <div class="service-pricing">
+                            <div>
+                                <div class="price">From $99</div>
+                                <div class="price-note">Initial Treatment</div>
+                            </div>
+                            <a href="#quote" class="btn btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#quote" class="btn btn-secondary">Need Another Service? Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Getting professional home service has never been easier</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Request a Quote</h3>
+                    <p>Fill out our simple form or call us to describe your service needs. Get a free, no-obligation estimate.</p>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Schedule Service</h3>
+                    <p>Choose a convenient date and time. We offer same-day and emergency services for urgent needs.</p>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Professional Service</h3>
+                    <p>Our vetted, licensed professional arrives on time with all necessary tools and equipment.</p>
+                    <div class="step-connector"></div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Quality Guarantee</h3>
+                    <p>We stand behind our work with a 1-year warranty. Only pay when you're completely satisfied.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Join 15,000+ satisfied homeowners who trust us with their homes</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Emergency plumbing service on a Sunday! The plumber arrived within an hour, fixed our burst pipe professionally, and the price was exactly as quoted. Highly recommended!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h5>Sarah Johnson</h5>
+                            <p>Plumbing Service</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Our AC broke during a heatwave. ProHome had a technician here same day, and he not only fixed it but also showed us how to maintain it properly. Outstanding service!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h5>Michael Rodriguez</h5>
+                            <p>HVAC Service</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The cleaning team transformed our home before our move-in. They were thorough, professional, and even did some extra touch-ups. Worth every penny!"
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Customer">
+                        </div>
+                        <div class="author-info">
+                            <h5>Emily Chen</h5>
+                            <p>Cleaning Service</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section" id="quote">
+        <div class="container">
+            <div class="quote-container">
+                <div class="section-title">
+                    <h2>Get Your Free Quote Today</h2>
+                    <p>No hidden fees, no obligation. Get a transparent estimate for your home service needs.</p>
+                </div>
+                
+                <div class="quote-features">
+                    <div class="quote-feature">
+                        <div class="quote-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>Quick Response</h4>
+                        <p style="text-align: center; font-size: 0.95rem; opacity: 0.9;">Get a quote within 30 minutes</p>
+                    </div>
+                    
+                    <div class="quote-feature">
+                        <div class="quote-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>Price Lock</h4>
+                        <p style="text-align: center; font-size: 0.95rem; opacity: 0.9;">Quoted price is what you pay</p>
+                    </div>
+                    
+                    <div class="quote-feature">
+                        <div class="quote-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4>Flexible Scheduling</h4>
+                        <p style="text-align: center; font-size: 0.95rem; opacity: 0.9;">Choose your preferred time</p>
+                    </div>
+                </div>
+                
+                <div class="quote-form">
+                    <form id="quote-request-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quote-name">Full Name</label>
+                                <input type="text" id="quote-name" class="form-control" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quote-email">Email Address</label>
+                                <input type="email" id="quote-email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quote-phone">Phone Number</label>
+                                <input type="tel" id="quote-phone" class="form-control" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="quote-zip">ZIP Code</label>
+                                <input type="text" id="quote-zip" class="form-control" placeholder="Enter your ZIP code" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote-service">Service Needed</label>
+                            <select id="quote-service" class="form-control" required>
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="plumbing">Plumbing</option>
+                                <option value="electrical">Electrical</option>
+                                <option value="hvac">HVAC</option>
+                                <option value="handyman">Handyman</option>
+                                <option value="cleaning">Cleaning</option>
+                                <option value="pest-control">Pest Control</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quote-details">Service Details</label>
+                            <textarea id="quote-details" class="form-control" placeholder="Please describe the service you need, including any specific issues or requirements" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="quote-date">Preferred Service Date</label>
+                                <input type="date" id="quote-date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="quote-time">Preferred Time</label>
+                                <select id="quote-time" class="form-control">
+                                    <option value="" selected>Flexible</option>
+                                    <option value="morning">Morning (8 AM - 12 PM)</option>
+                                    <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                                    <option value="evening">Evening (4 PM - 7 PM)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group" style="display: flex; align-items: center;">
+                            <input type="checkbox" id="emergency" style="margin-right: 10px;">
+                            <label for="emergency" style="margin-bottom: 0;">This is an emergency service needed</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 18px; font-size: 1.1rem;">
+                            <i class="fas fa-file-invoice-dollar"></i> Get Free Quote
+                        </button>
+                        
+                        <div class="form-footer">
+                            <p>By submitting, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. We'll contact you within 30 minutes with your free quote.</p>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="trust-badges" style="margin-top: 40px;">
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="badge-text">
+                            <div>Licensed & Insured</div>
+                            <div style="font-size: 0.9rem; font-weight: normal; color: var(--gray);">Full protection</div>
+                        </div>
+                    </div>
+                    
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="badge-text">
+                            <div>1-Year Warranty</div>
+                            <div style="font-size: 0.9rem; font-weight: normal; color: var(--gray);">On all work</div>
+                        </div>
+                    </div>
+                    
+                    <div class="badge">
+                        <div class="badge-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="badge-text">
+                            <div>Background Checked</div>
+                            <div style="font-size: 0.9rem; font-weight: normal; color: var(--gray);">All technicians</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about our home services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How quickly can I get service?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For emergency services (plumbing, electrical), we typically respond within 1-2 hours. For standard services, we offer same-day or next-day appointments depending on availability. You can schedule services up to 90 days in advance through our online booking system.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are your technicians licensed and insured?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all our service professionals are fully licensed, insured, and background-checked. We verify credentials before hiring and maintain ongoing training. Our insurance covers up to $2 million in liability protection for your peace of mind.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is your pricing structure?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer transparent, upfront pricing. Most services have a diagnostic/service call fee (typically $79-$99) which is waived if you proceed with the repair. Labor rates vary by service type, and we provide detailed quotes before any work begins. There are no hidden fees or surprises.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you offer warranties on your work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer a 1-year warranty on all labor and a 30-day satisfaction guarantee. If you're not completely satisfied with our work, we'll return to fix it at no additional cost. Manufacturer warranties apply to parts and equipment we install.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What areas do you serve?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We currently serve the metropolitan area and surrounding suburbs within a 50-mile radius. Enter your ZIP code in the quote form to check availability. We're expanding to new areas regularly, so check back if we're not currently in your location.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="#quote" class="btn btn-accent">Ready to Get Started? Get Your Free Quote</a>
+                <a href="tel:5551234567" class="btn btn-secondary" style="margin-left: 15px;">
+                    <i class="fas fa-phone"></i> Call Now: (555) 123-4567
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>ProHome Services</h4>
+                    <p>Your trusted partner for professional home maintenance and repair since 2010. Licensed, insured, and committed to excellence.</p>
+                    <div style="margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: white; font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Customer Reviews</a></li>
+                        <li><a href="#quote">Free Quote</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#plumbing">Plumbing</a></li>
+                        <li><a href="#electrical">Electrical</a></li>
+                        <li><a href="#hvac">HVAC</a></li>
+                        <li><a href="#handyman">Handyman</a></li>
+                        <li><a href="#cleaning">Cleaning</a></li>
+                        <li><a href="#pest-control">Pest Control</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Contact & Service Areas</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> 123 Service Way, Suite 100</li>
+                        <li><i class="fas fa-phone" style="margin-right: 10px;"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope" style="margin-right: 10px;"></i> service@prohomeservices.com</li>
+                        <li><i class="fas fa-clock" style="margin-right: 10px;"></i> Mon-Sun: 6 AM - 10 PM</li>
+                        <li><i class="fas fa-ambulance" style="margin-right: 10px;"></i> Emergency: 24/7</li>
+                    </ul>
+                    
+                    <div class="service-areas">
+                        <span class="area-tag">Metro Area</span>
+                        <span class="area-tag">North Suburbs</span>
+                        <span class="area-tag">South Suburbs</span>
+                        <span class="area-tag">West County</span>
+                        <span class="area-tag">East County</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 ProHome Services. All rights reserved. | License #: HS123456 | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="#" style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a> | Fully Insured & Bonded</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+        
+        // Form submission for quote request
+        document.getElementById('quote-request-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('quote-name').value;
+            const email = document.getElementById('quote-email').value;
+            const phone = document.getElementById('quote-phone').value;
+            const service = document.getElementById('quote-service').value;
+            
+            // Show success message
+            alert(`Thank you ${name}! Your free quote request for ${service} has been received. We'll contact you at ${phone} and ${email} within 30 minutes.`);
+            
+            // In a real implementation, you would send this data to your server
+            console.log('Quote request:', { name, email, phone, service });
+            
+            // Reset form
+            this.reset();
+            
+            // Set minimum date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('quote-date').min = today;
+        });
+        
+        // Set minimum date for quote form
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('quote-date').min = today;
+        
+        // Emergency service checkbox effect
+        document.getElementById('emergency').addEventListener('change', function() {
+            if(this.checked) {
+                document.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-exclamation-triangle"></i> Request Emergency Service';
+                document.querySelector('button[type="submit"]').classList.add('btn-accent');
+                document.querySelector('button[type="submit"]').classList.remove('btn-primary');
+            } else {
+                document.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-file-invoice-dollar"></i> Get Free Quote';
+                document.querySelector('button[type="submit"]').classList.remove('btn-accent');
+                document.querySelector('button[type="submit"]').classList.add('btn-primary');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(window.innerWidth <= 768) {
+                        document.querySelector('.nav-links').style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
